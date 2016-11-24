@@ -392,7 +392,7 @@ namespace COMP229_F2016_Lesson11.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Store");
         }
 
         //
@@ -449,7 +449,7 @@ namespace COMP229_F2016_Lesson11.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Store");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult

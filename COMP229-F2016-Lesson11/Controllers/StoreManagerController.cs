@@ -10,7 +10,6 @@ using COMP229_F2016_Lesson11.Models;
 
 namespace COMP229_F2016_Lesson11.Controllers
 {
-    [Authorize(Users = "admin@example.com")]
     public class StoreManagerController : Controller
     {
         private MVCMusicStoreContext db = new MVCMusicStoreContext();
@@ -64,6 +63,7 @@ namespace COMP229_F2016_Lesson11.Controllers
             return View(album);
         }
 
+        [Authorize(Users = "admin@example.com")]
         // GET: StoreManager/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -81,6 +81,7 @@ namespace COMP229_F2016_Lesson11.Controllers
             return View(album);
         }
 
+        [Authorize(Users = "admin@example.com")]
         // POST: StoreManager/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -99,6 +100,7 @@ namespace COMP229_F2016_Lesson11.Controllers
             return View(album);
         }
 
+        [Authorize(Users = "admin@example.com")]
         // GET: StoreManager/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -114,6 +116,7 @@ namespace COMP229_F2016_Lesson11.Controllers
             return View(album);
         }
 
+        [Authorize(Users = "admin@example.com")]
         // POST: StoreManager/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

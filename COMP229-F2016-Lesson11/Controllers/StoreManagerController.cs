@@ -10,7 +10,7 @@ using COMP229_F2016_Lesson11.Models;
 
 namespace COMP229_F2016_Lesson11.Controllers
 {
-    [Authorize(Users = "admin@example.com")]
+    [Authorize(Roles = "admin")]
     public class StoreManagerController : Controller
     {
         private MVCMusicStoreContext db = new MVCMusicStoreContext();
